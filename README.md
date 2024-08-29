@@ -4,11 +4,11 @@ This project provides an API for conversational interactions with documents usin
 
 ## Features
 
-- **Upload and process documents:** Supports `.docx` and `.pdf` files.
-- **Conversational Retrieval Chain:** Uses OpenAI's GPT models to generate responses based on document content.
-- **Session Management:** Tracks conversation history using MongoDB.
-- **AWS Integration:** Downloads files from AWS S3 and processes them.
-- **CORS Support:** Allows Cross-Origin Resource Sharing to enable interaction with frontend applications.
+- **Upload and Process Documents**: Supports `.docx` and `.pdf` files.
+- **Conversational Retrieval Chain**: Uses OpenAI's GPT models to generate responses based on document content.
+- **Session Management**: Tracks conversation history using MongoDB.
+- **AWS Integration**: Downloads files from AWS S3 and processes them.
+- **CORS Support**: Allows Cross-Origin Resource Sharing to enable interaction with frontend applications.
 
 ## Requirements
 
@@ -22,20 +22,20 @@ This project provides an API for conversational interactions with documents usin
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the Repository**
 
     ```bash
     git clone https://github.com/ernesthenry/DocuChat.git
     cd DocuChat
     ```
 
-2. Install the dependencies:
+2. **Install the Dependencies**
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Set up environment variables:
+3. **Set Up Environment Variables**
 
     - Create a `.env` file in the root directory.
     - Add your OpenAI API key, MongoDB connection URL, and AWS S3 credentials.
@@ -51,15 +51,16 @@ This project provides an API for conversational interactions with documents usin
 
 ## Usage
 
-1. **Start the FastAPI application:**
+1. **Start the FastAPI Application**
 
     ```bash
     uvicorn main:app --reload
     ```
 
-2. **Send a POST request to the `/chat` endpoint:**
+2. **Send a POST Request to the `/chat` Endpoint**
 
     - **Request Body:**
+
       ```json
       {
           "session_id": "your_session_id",
@@ -69,6 +70,7 @@ This project provides an API for conversational interactions with documents usin
       ```
 
     - **Response:**
+
       ```json
       {
           "response": {
@@ -78,15 +80,16 @@ This project provides an API for conversational interactions with documents usin
       }
       ```
 
-3. **Track conversation history:**
-   - Conversation history is stored in MongoDB under the `chat-history` collection. Each session is identified by a unique `session_id`.
+3. **Track Conversation History**
+
+    - Conversation history is stored in MongoDB under the `chat-history` collection. Each session is identified by a unique `session_id`.
 
 ## API Endpoints
 
 ### `/chat` [POST]
 
-- **Description:** Generates a response to the user's query based on the provided document and session history.
-- **Parameters:**
+- **Description**: Generates a response to the user's query based on the provided document and session history.
+- **Parameters**:
   - `session_id` (optional): Unique identifier for the session.
   - `user_input`: The user's query.
   - `data_source`: The file name of the document to be used.
@@ -107,10 +110,8 @@ This project provides an API for conversational interactions with documents usin
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a Pull Request.
 
-
 ## Contact
 
-- **Author:** Kato Ernest Henry
-- **Email:** henry38ernest@gmail.com
-- **GitHub:** [ernesthenry](https://github.com/ernesthenry)
-
+- **Author**: Kato Ernest Henry
+- **Email**: henry38ernest@gmail.com
+- **GitHub**: [ernesthenry](https://github.com/ernesthenry)
